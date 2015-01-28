@@ -1,12 +1,15 @@
 Django Gaeauth
 =======================
 
-.. image:: https://travis-ci.org/fhahn/django-gaeauth.svg?branch=master
-   :target: https://travis-ci.org/fhahn/django-gaeauth
-
 An Django authentication backend for using the Google App Engine Users_ and Oauth_ API for user login/logout.
 
 It only works on Google App Engine and you will also need the Djangoappengine backend for Django-Nonrel_.
+
+
+### Fork by Philippe Vignau
+
+**Different rule : only authorize Django staff and GAE admin users**  
+(and don't use settings ALLOWD_USERS or ALLOWED_DOMAINS)
 
 
 Installation
@@ -14,7 +17,7 @@ Installation
 
 * get the code:
 
-    git clone https://fhahn@github.com/fhahn/django-gaeauth.git
+    git clone https://github.com/Philoozushi/django-gaeauth.git
    
 
 
@@ -59,24 +62,6 @@ google_logout
 
 google_authenticate
   authenticates the user using the Google App Engine Users_ API
-
-
-Settings
-=====================
-
-Available settings:
-
-ALLOWED_USERS
-  Limit access to a list of usernames
-
-  e.g. with ALLOWD_USERS = ('bar@foo.com',) only the user with username bar@foo.com can
-  sign in
-
-ALLOWED_DOMAINS
-  Limit access to a list of domains 
-
-  e.g. with ALLOWED_DOMAINS = ('foo.com',) only users with @foo.com email adresses 
-  can sign in
 
 
 .. _Users: https://code.google.com/appengine/docs/python/users/functions.html

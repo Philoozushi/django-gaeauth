@@ -1,17 +1,21 @@
-# Django Gaeauth
+Django Gaeauth
+=======================
 
 An Django authentication backend for using the Google App Engine Users_ and Oauth_ API for user login/logout.
 
 It only works on Google App Engine and you will also need the Djangoappengine backend for Django-Nonrel_.
 
 
-### Fork by Philippe Vignau
+Fork by Philippe Vignau
+~~~~~~~~~~~~~~~~~~~~~~~
 
-**Different rule : only authorize Django staff and GAE admin users**  
+**Different rule : only authorize Django staff and GAE admin users**
+
 (and don't use settings ALLOWD_USERS or ALLOWED_DOMAINS)
 
 
-# Installation
+Installation
+====================================
 
 * get the code:
 
@@ -47,7 +51,8 @@ It only works on Google App Engine and you will also need the Djangoappengine ba
 Now you can use **/accounts/login/** to use Google Accounts for login and **/accounts/logout/** to log out. 
 
 
-# Urls
+Urls
+========
 
 Django-gaeauth provides following named urls:
 

@@ -1,7 +1,9 @@
 # -*- coding: utf-8 -*-
 
-from django.conf.urls.defaults import *
-
+try:
+	from django.conf.urls import patterns, url # Django 1.6+
+except:
+	from django.conf.urls.defaults import patterns, url # Django 1.5-
 
 urlpatterns = patterns('',
    url(r'^login/$', 'gaeauth.views.login', name='google_login'),
